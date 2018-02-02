@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="exampleApp" lang="en"> <!-- We establish that everything within this tag is Angularfied my using ng-app -->
+<html ng-app="saerfApp" lang="en"> <!-- We establish that everything within this tag is Angularfied my using ng-app -->
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,68 +7,17 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/saerfStyle.css">
 
-    <!-- This sources AngularJS from Google --> 
+    <!-- This sources AngularJS from Google -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
 
     <!-- We source our javascript file. This needs to come after the angular reference above so it can be interpreted correctly -->
-    <script src="controller.js"></script>
+    <script src="js/saerfController.js"></script>
 
-
-    <title>Angular Welcome!</title>
+    <title></title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-
-
-    <!-- Example Code -->
-
-    <div ng-controller="exampleController as exCtrl">   <!-- Assign a controller to handle logic and establish scope -->
-
-      <h3>{{exCtrl.greeting}}</h3>  <!-- Display a string variable as text on the page -->
-      
-      <ul class="list-group">
-          <!-- ng-repeat uses the temporary variable personVar to loop through the peopleArr array -->
-          <div ng-repeat="personVar in exCtrl.peopleArr"> 
-              <!-- The items inside {{}} will be rendered with their value in the client. -->
-              <!-- They are also bound to the values in the controller. -->
-              <li class="list-group-item"> name: {{ personVar.name }}, Age: {{ personVar.age }}</li>
-          </div>
-      </ul>
-       
-
-      <form ng-submit="exCtrl.addPerson()"> <!-- We model the addPerson function so it is called upon form submission -->
-        <div class="row">
- 
-          <div class="col">
-            <!-- We bind the value of this input form to exCtrl.formEntryName. -->
-            <input type="text" placeholder="Enter name" ng-model="exCtrl.formEntryName"/> 
-          </div>
-
-          <div class="col">
-            <!-- We bind the value of this input form to exCtrl.formEntryAge. -->
-            <input type="number" placeholder="Enter age" ng-model="exCtrl.formEntryAge"/>
-          </div>
-      
-          <div class="col">
-            <button class="btn-primary" type="submit">Submit</button>
-          </div>
- 
-        </div>
-      </form>
-
-
-    </div> <!-- This ends the controller assignment. Code below this will not be within the scope of any controller. -->
-
-    <!-- /Example Code -->
-
-
-
-
-
-
-
-
 
 
     <!-- Optional JavaScript -->
